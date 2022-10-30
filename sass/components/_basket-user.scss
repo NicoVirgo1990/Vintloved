@@ -1,0 +1,78 @@
+.logo__signin-basket{
+    display: flex;
+    align-items: center;
+   
+    & > *{
+        padding: 1rem;
+        margin: 1rem;
+    }
+    .user__icon{
+        height: 3rem;
+        width: 3rem;   
+        margin-bottom: 1rem;
+        @media only screen and(max-width: $bp-small ) {
+            display: none;
+        }
+    }
+
+    .basket__icon{
+        height: 3rem ;
+        width: 3rem;
+        margin-bottom: 1rem;
+        @media only screen and(max-width: $bp-small ) {
+            
+            height: 2rem;
+            width: 2rem;   
+        }
+    }
+
+    &--signin{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        @media only screen and(max-width: $bp-small ) {
+            display: none;
+        }
+
+    }
+
+    &--basket{
+        
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      
+    }
+
+} 
+
+
+.user__icon{
+    height: 3rem;
+    width: 3rem;   
+    margin-bottom: 1rem;
+}
+
+.basket__icon{
+    height: 3rem ;
+    width: 3rem;
+    margin-bottom: 2rem;
+}
+
+
+.user__text{
+    color: #000;
+}
+
+
+
+.cart__text{
+    font-family: inherit;
+    text-decoration:none ;
+    color: #000;
+    
+}

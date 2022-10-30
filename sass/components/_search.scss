@@ -1,0 +1,59 @@
+
+.search{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+    @media only screen and(max-width: $bp-small ) {
+        display: none;
+    }
+    &__input{
+       font-family: inherit;
+       font-size: inherit;
+       background-color: #fff;
+       padding-left: 0;
+       padding-right:1.3rem ;
+       padding-top: 1rem;
+       padding-bottom: 1rem;
+       width: 100%;
+       transition: all .4s;
+       margin-right:-2.2rem ;
+        border: 0.2px solid #a7a6a6 ;
+
+       &:focus{
+          outline:none;
+         
+       }
+
+       &::-webkit-input-placeholder{
+        font-weight:100 ;
+        color:#989696;
+       }
+
+    }
+
+    &__input:focus + &__button{
+        transition: all .4s;
+    }
+
+    &__button{
+        border:none;
+        background-color: #fff;
+        &:focus{
+            outline:none
+        }
+
+        &:active{
+            transform: translateY(2px);
+        }
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+        fill: #a7a6a6;
+    }
+
+}

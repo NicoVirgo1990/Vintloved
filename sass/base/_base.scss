@@ -1,0 +1,89 @@
+
+
+$bp-largest: 75em;   // 1200px
+$bp-large: 62.5em;   // 1000px
+$bp-medium: 50em;    // 800px;
+$bp-small: 40em;  
+
+*, *::before ,*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase; 
+
+    @media only screen and (max-width: $bp-largest){
+        font-size: 50%;
+    }
+
+ 
+}
+
+
+.containerPreHeader{
+    display: grid;
+    grid-template-rows: repeat(3, min-content);
+    grid-template-columns: [start] 1fr  repeat(8, [col-start] minmax(5rem , 18rem)[col-end]) 1fr[end];
+
+    @media only screen and(max-width: $bp-small ) {
+        grid-template-rows: repeat(2, min-content) ;  
+    }
+}
+
+
+.containerHome{
+    display: grid;
+    grid-template-rows: [head-start] min-content [head-end] repeat(2,min-content) [feat-start] 70rem [feat-end] repeat(5, min-content);
+    grid-template-columns:   [start] 5rem repeat(8, [col-start] minmax(5rem, 18rem) [col-end]) 5rem[end] ;
+
+    @media only screen and(max-width: $bp-small ) {
+     
+        grid-template-rows: [head-start] 65rem [head-end] repeat(2,min-content) [feat-start] min-content [feat-end] repeat(5, min-content) ;
+    }
+} 
+
+.containerShop{
+    display: grid;
+    grid-template-columns: [start] 5rem  repeat(8, [col-start] minmax(5rem , 18rem)[col-end]) 5rem [end];
+    position: relative;
+
+    @media only screen and(max-width: $bp-small ) {
+     
+        grid-template-columns: [start] 1rem  repeat(8, [col-start] minmax(5rem , 13rem)[col-end]) 1rem [end];
+    }
+
+    
+} 
+
+.containerItem{
+    display: grid;
+    grid-template-columns: [start] 5rem  repeat(8, [col-start] minmax(5rem , 18rem)[col-end]) 5rem [end];
+    position: relative;
+
+    @media only screen and(max-width: $bp-small ) {
+     
+        grid-template-columns: [start] 1rem  repeat(8, [col-start] minmax(5rem , 18rem)[col-end]) 1rem [end];
+    }
+}
+
+.containerFooter{
+    display: grid;
+    grid-template-rows:  min-content;
+    grid-template-columns: [start] min-content  repeat(8, [col-start] minmax(5rem , 18rem)[col-end]) min-content[end];
+
+    @media only screen and(max-width: $bp-small ) {
+     
+        grid-template-rows:min-content;
+
+        
+    }
+} 
+
+
+
+

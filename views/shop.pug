@@ -1,0 +1,26 @@
+extends base
+
+block content
+   .containerShop
+    .navigation__nav.navShop
+     ul.navigation__list__small-ul
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') louis vuitton
+      li.navigation__list__small
+       a.navigation__list__small__link(href='/shop') boutique
+      li.navigation__list__small
+       a.navigation__list__small__link(href='/') blog
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') check your code
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') contatti
+    section.card
+     each item in items
+      article.card__item
+       img.card__item__img(src=`${item.imageCover}`)
+       .card__item__box
+        span.card__item__box__span #{item.model.brand}
+        span.card__item__box__span #{item.model.model}
+        a.card__item___box__details.button(href=`/item/${item._id}`) dettagli
+      
+            

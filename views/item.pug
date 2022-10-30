@@ -1,0 +1,60 @@
+extends base
+
+block content
+   .containerItem 
+    .navigation__nav.navItem
+     ul.navigation__list__small-ul
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') louis vuitton
+      li.navigation__list__small
+       a.navigation__list__small__link(href='/shop') boutique
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') blog
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') check your code
+      li.navigation__list__small
+       a.navigation__list__small__link(href='#') contatti
+    section.item 
+        img.item__imgCover(src=`/${item.imageCover}`, alt="")
+        .item__description
+            span.item__description__features brand: #{ item.model.brand} 
+            span.item__description__features modello: #{ item.model.model} 
+            span.item__description__features condizioni: #{item.condition}
+            
+            - let lines = item.model.description.split('\n')
+            p.item__description__features--p descrizione: #{lines[0]} 
+            - lines = lines.splice(1, lines.length);
+            each line in lines 
+             p.item__description__features--p #{ line}
+
+            p.item__description__features--p dettagli: #{item.features}
+            span.item__description__features scatola: #{item.box === true ? 'sì' : 'no'}
+            span.item__description__features dustbag: #{item.dustbag === true ? 'sì' : 'no'}
+            span.item__description__features prezzo:  #{item.price}€
+            span.item_description_features tempi di spedizione: 24/48h 
+        .item__rowsImage
+            .item__rowsImage__firstRowImg
+                img.item__imgDetail(src=`/${item.imageCover}`, alt="")
+                img.item__imgDetail(src=`/${item.images[1]}`, alt="")
+                img.item__imgDetail(src=`/${item.images[3]}`, alt="")
+                img.item__imgDetail(src=`/${item.images[4]}`, alt="")    
+            .item__rowsImage__secondRowImg
+                img.item__imgDetail(src=`/${item.images[0]}`, alt="")
+                img.item__imgDetail(src=`/${item.images[5]}`, alt="")
+                img.item__imgDetail(src=`/${item.images[6]}`, alt="")
+                img.item__imgDetail(src=`/${item.images[2]}`, alt="")
+        .item__buy
+            span.item__buy__titleBuy scegli il tuo metodo di pagamento 
+            .item__buy__buttonBuy
+                a.button.button--normal(href="") acquista
+                a.button.button--paypal(href="") paypal
+                a.button.button--soisy(href="") soysio
+                a.button.button--klarna(href="") klarna
+
+
+
+
+        
+
+
+        

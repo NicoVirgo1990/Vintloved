@@ -1,0 +1,169 @@
+extends base
+
+block content
+    .containerHome      
+      header.header
+        img.header__img(srcset='img/vintlovedshowroom.jpg' , alt='')
+        .navigation__nav.navHome
+          ul.navigation__list__small-ul
+            li.navigation__list__small
+              a.navigation__list__small__link(href='/louisvuitton') louis vuitton
+            li.navigation__list__small
+              a.navigation__list__small__link(href="/shop") boutique
+            li.navigation__list__small
+              a.navigation__list__small__link(href='/shop') blog
+            li.navigation__list__small
+              a.navigation__list__small__link(href='/authenticity') autenticità
+            li.navigation__list__small
+              a.navigation__list__small__link(href='#') rateizzazioni
+            li.navigation__list__small
+              a.navigation__list__small__link(href='#') contatti
+      .secondhandbar
+        p.secondhandbar__text LA SECONDA MANO COME PRIMA SCELTA
+      .authenticity
+        img.authenticity__img(src='img/logo-prova.jpg', alt='authenticity')
+      section.featured-categories
+        .featured-categories__lowprice
+          img.featured-categories__lowprice__img(src='img/lowprice.jpg', alt='low price')
+          p.featured-categories__lowprice__text
+            | trova la borsa dei tuoi sogni a meno di 700&euro;
+          a.featured-categories--link.button(href='/shop')
+            | SCOPRILE
+        .featured-categories__premiumitems
+          img.featured-categories__premiumitems__img(src='img/categoriesImage.jpg', alt='premium bags')
+          p.featured-categories__premiumitems__text
+            | articoli premium: gli articoli piu&apos; esclusivi
+          a.featured-categories--link.button(href='')
+            | SCOPRILE
+        .featured-categories__promotion
+          img.featured-categories__promotion__img(src='img/premium.jpg', alt=' discount bags')
+          p.featured-categories__promotion__text
+            | scopri le promozioni che puoi trovare sul nostro sito
+          a.featured-categories--link.button(href='')
+            | SCOPRILE
+      section.newsletter
+        h2.newsletter__title RICEVI LE NOVITA&apos; DI VINTLOVED
+        p.newsletter__subtitle
+          | Unisciti alla nostra community per ricevere le nostre novit&agrave; prima di tutte
+          br
+          br
+          | &apos;iscrizione alla newsletter ti permetter&agrave; di avere il 5% di sconto sul tuo primo ordine e offerte esclusive dedicate solo agli iscritti!
+        form.cta-form(action='')
+          input.cta-form__text(type='text', placeholder="inserisci l'email")
+          button.cta-form__button iscriviti
+      section.featured
+        article.featured-item
+          a.featured-item__link(href='')
+            img.featured-item__img(src= `${itemsShow[0].imageCover}` , alt='bag')
+          a.featured-item__link(href='')
+            span.featured-item__link--title #{itemsShow[0].model.brand}
+          a.featured-item__link(href)
+            p.featured-item__link--subtitle  #{itemsShow[0].model.model}
+        article.featured-item
+          a.featured-item__link(href='')
+            img.featured-item__img(src=`${itemsShow[1].imageCover}`, alt='bag')
+          a.featured-item__link(href='')
+            span.featured-item__link--title #{itemsShow[1].model.brand}
+          a.featured-item__link(href='')
+            p.featured-item__link--subtitle  #{itemsShow[1].model.model}
+        article.featured-item
+          a.featured-item__link(href='')
+            img.featured-item__img(src=`${itemsShow[2].imageCover}`, alt='bag')
+          a.featured-item__link(href='')
+            span.featured-item__link--title #{itemsShow[2].model.brand}
+          a.featured-item__link(href='')
+            p.featured-item__link--subtitle  #{itemsShow[2].model.model}
+        article.featured-item
+          a.featured-item__link(href='')
+           img.featured-item__img(src=`${itemsShow[3].imageCover}`, alt='bag')
+          a.featured-item__link(href='')
+            span.featured-item__link--title #{itemsShow[3].model.brand}
+          a.featured-item__link(href='')
+            p.featured-item__link--subtitle #{itemsShow[3].model.model}
+      .circular__img
+        img.circular__img--1(src='/img/vendereimg.jpg', alt='')
+        img.circular__img--2(src='/img/vendereimgOr.jpg', alt='')
+      .circular__desc
+        h3.circular__desc__pre-title
+          | VENDI A NOI
+        h2.circular__desc__title
+          | Il nostro concetto di economia circolare
+        p.circular__desc__desc
+          | Vintloved acquista i prodotti dai propri clienti, proprio come te!
+          | vendendo a noi potrai realizzare immediatamente ed inoltre darai un aiuto all&apos;ambiente
+        a.circular__desc__button.button(href='')
+          | vendi ora
+      |  
+      section.features
+        .features__desc
+          svg.features__icon
+            use(xlink:href='img/sprite.svg#icon-rocket')
+          h2.features__title.h2 spedizione veloce
+          p.features__p
+            | vintloved offre il servizio di spedizione piu&apos; veloce possibile! 
+            br
+            br
+            | riceverai il tuo articolo in 24h/48h dal momento dell&apos;acquisto.
+            br
+            br
+            | ricordiamo che in caso di smarrimento del pacco la responsabilit&agrave; &egrave; totalmente nostra e il cliente verr&agrave; immediatamente rimborsato
+        .features__desc
+          svg.features__icon
+            use(xlink:href='img/sprite.svg#icon-paste')
+          h2.features__title.h2 certificato di autenticit&agrave;
+          p.features__p
+            | l&apos;autenticit&agrave; degli articoli di vintloved &egrave; garantita dalle nostre due fasi: 
+            br
+            br
+            | 1) controllo degli articoli da parte dei nostri esperti 
+            br
+            |  
+            br
+            | 2) verifica da parte di un ente certificatore professionale estern come baghaholic 101 o proauthenticators che rilascer&agrave; un certificato di autenticit&agrave; che riceverete insieme all&apos;articolo
+        .features__desc
+          svg.features__icon
+            use(xlink:href='img/sprite.svg#icon-user-tie')
+          h2.features__title.h2 personal shopper
+          p.features__p
+            | vintloved offre il servizio
+            br
+            |  di personal shopper mediante la chat che trovate all&apos;interno della nostra piattaforma.
+            br
+            br
+            Contattate uno dei nostri esperti per farvi consigliare la borsa o l&apos;accessorio piu&apos; adatto alle vostre esigenze. Personale qualificato e con grande esperienza nel mondo della moda &egrave; l&igrave; ad aspettarti
+        .features__desc
+          svg.features__icon
+            use(xlink:href='img/sprite.svg#icon-lock')
+          h2.features__title.h2 pagamento criptato
+          p.features__p
+            | tutti i dati relativi ai vostri pagamenti sono criptati e sicuri all&apos;interno della nostra piattaforma.
+            br
+            br
+            | Stripe, leader a livello mondiale, &egrave; il nostro gestore dei pagamenti che si occuper&agrave; della transazione e della sicurezza dei vostri dati
+      .follow-us
+        h2.follow-us__h2.h2 seguici su @vintlovedofficial
+        a(href='https://www.instagram.com/vintlovedofficial/?hl=it')
+          .follow-us__cont
+            .follow-us__hov
+              svg.follow-us__icon
+                use(xlink:href='img/sprite.svg#icon-instagramwhite')
+              .follow-us__hov--text instagram
+            img.follow-us__img(src='/img/instagram1.jpg', alt='vintloved instagram')
+        |  
+        a(href='https://www.instagram.com/vintlovedofficial/?hl=it')
+          .follow-us__cont
+            .follow-us__hov
+              .follow-us__hov
+                svg.follow-us__icon
+                  use(xlink:href='img/sprite.svg#icon-instagramwhite')
+                .follow-us__hov--text instagram
+            img.follow-us__img(src='/img/instagram2.jpg', alt='vintloved instagram')
+        |  
+        a(href='https://www.instagram.com/vintlovedofficial/?hl=it')
+          .follow-us__cont
+            .follow-us__hov
+              .follow-us__hov
+                svg.follow-us__icon
+                  use(xlink:href='img/sprite.svg#icon-instagramwhite')
+                .follow-us__hov--text instagram
+            img.follow-us__img(src='/img/instagram3.jpg', alt='vntloved instagram')  
