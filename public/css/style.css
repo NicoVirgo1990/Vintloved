@@ -705,7 +705,7 @@ html {
     padding-right: 1.3rem;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    width: 20rem;
+    width: 100%;
     transition: all .4s;
     margin-right: -2.2rem;
     border: 0.2px solid #a7a6a6; }
