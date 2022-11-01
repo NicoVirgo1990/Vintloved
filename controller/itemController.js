@@ -13,6 +13,8 @@ exports.setItemIds = (req, rea, next) => {
 };
 
 
+
+console.log('NUMEROOOOOOO', Item);
 exports.getAllItems= factory.getAll(Item);
 exports.getItem = factory.getOne(Item);
 exports.createItem = factory.createOne(Item);

@@ -26,7 +26,7 @@ router
 
 
 
-
+    console.log('sto prima di router id su item.js');
 router
     .route('/:id')
     .get(itemController.getItem)

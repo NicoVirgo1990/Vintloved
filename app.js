@@ -38,10 +38,11 @@ app.use(
 				"'self'",
 				'https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js',
 				'https://cdnjs.cloudflare.com/ajax/libs/axios/1.1.3/esm/axios.min.js.map',
+				"https://unpkg.com/axios/dist/axios.min.js"
 			],
 			'style-src': ["'self'", 'https://fonts.googleapis.com/'],
 			'font-src': ["'self'", 'https://fonts.gstatic.com', 'data:'],
-			'frame-src': ["'self'", 'https://widget.trustpilot.com/', 'ìhttps://mozbar.moz.com/'],
+			'frame-src': ["'self'", 'https://widget.trustpilot.com/', 'https://mozbar.moz.com/'],
 		},
 	})
 );
@@ -83,7 +84,6 @@ app.use(mongoSanitize());
 app.use(xss());
 
 //  prevent parameter pollution
-
 app.use(
 	hpp({
 		whitelist: ['brand', 'model', 'ratingsAverage', 'ratingsQuantity'],
@@ -110,6 +110,7 @@ app.use('/api', limiter);
 app.use('/', viewRouter);
 app.use('/api/v1/models', modelRouter);
 app.use('/api/v1/users', userRouter);
+console.log('sto prima di items su app.js');
 app.use('/api/v1/items', itemRouter);
 app.use('/api/v1/blogs', blogRouter);
 
